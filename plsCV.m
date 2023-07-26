@@ -16,7 +16,7 @@ function [pls_yh,yNorm,winC,winCLoss,fk,allBetas] = plsCV(X,y,alpha,numComponent
 % standardizeY: true or false to do standardization of y or not (columnwise z-scoring)
 % parallel: if true, pls with use parallelization of cpus
 % feats: set empty to ignore or give cell array where values within each cell correspond to the indices of a specific set of features (columns in X) to use during training
-% ssVals: set empty to ignore or set to a value which will act as the threshold for VIP. Features > this VIP in bootstraps of the data will be "selected" by stability selection
+% ssVals: set empty to ignore or set to a value which will act as the threshold for stabilty selection. Features > this will be retained in the "stable set". To change the VIP threshold edit lines 91, 98, 182 and 198 (the call to stabSel.m)
 %
 % OUTPUTS -----
 % pls_yh : predictions of y
